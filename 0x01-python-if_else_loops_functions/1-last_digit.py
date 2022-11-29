@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-print("Random number is {}".format(number))
 a = str(number)
 b = int(a[-1])
 if number < 0:
