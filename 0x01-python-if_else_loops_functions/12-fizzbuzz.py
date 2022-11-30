@@ -10,6 +10,3 @@ def fizzbuzz():
         else:
             num = i
         print("{} ".format(num), end='')
-
-fizzbuzz()
-print("")
