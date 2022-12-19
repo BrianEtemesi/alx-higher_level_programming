@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 def best_score(a_dictionary):
-    if a_dictionary is None:
+    if (a_dictionary is None) or (len(a_dictionary) == 0):
         return None
     v_list = []
     for values in a_dictionary.values():
