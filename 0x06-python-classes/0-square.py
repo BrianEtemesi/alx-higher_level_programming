@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 class Square:
-
-    """represents a square"""
-
+    """
+    represents a square
+    """
     pass
-    """class has no attributes yet"""
+    """
+    class has no attributes yet
+    `"""
