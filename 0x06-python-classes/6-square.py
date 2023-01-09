@@ -9,7 +9,7 @@ my_print.
 def posError():
     """raises TypeError is position conditions are not met"""
 
-    raise TypeError("position must be a tuple of 2 integers")
+    raise TypeError("position must be a tuple of 2 positive integers")
 
 
 class Square:
