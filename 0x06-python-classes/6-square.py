@@ -31,7 +31,7 @@ class Square:
         if type(position[0]) != int or type(position[1]) != int:
             posError()
         if position[0] < 0 or position[1] < 0:
-            posError
+            posError()
         self.__position = position
 
     def area(self):
