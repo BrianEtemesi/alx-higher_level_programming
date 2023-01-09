@@ -26,7 +26,7 @@ class Square:
         """prints square to stdout using '#' """
 
         if self.__size == 0:
-            print("\n")
+            print("")
         else:
             x = 0
             y = self.__size
