@@ -26,6 +26,8 @@ class Square:
 
         if type(position) != tuple:
             posError()
+        if len(position) != 2:
+            posError()
         if type(position[0]) != int or type(position[1]) != int:
             posError()
         if position[0] < 0 or position[1] < 0:
@@ -83,6 +85,8 @@ class Square:
         """updates position of square instance"""
 
         if type(value) != tuple:
+            posError()
+        if len(value) != 2:
             posError()
         if type(value[0]) != int or type(value[1]) != int:
             posError()
