@@ -14,3 +14,46 @@ now use it:
 
 	>>> add_integer(10, 100)
 	110
+
+negative integers:
+
+	>>> add_integer(-2, -2)
+	-4
+
+only one argument passed to function:
+
+	>>> add_integer(2)
+	100
+
+floating point numbers:
+
+	>>> add_integer(10.3, 2.7)
+	12
+
+When argument passed is not an integer or float
+-----------------------------------------------
+
+string passed to function:
+
+	>>> add_integer(2, "school")
+	Traceback (most recent call last):
+		...
+	TypeError: b must be an integer
+	>>> add_integer("school", 6)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
+list passed as argument:
+
+	>>> add_integer([1, 2], 80)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
+Argument None:
+
+	>>> add_integer(None)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
