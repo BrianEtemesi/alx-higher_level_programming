@@ -30,6 +30,27 @@ floating point numbers:
 	>>> add_integer(10.3, 2.7)
 	12
 
+case of float overflow 1:
+
+	>>> add_integer(float('inf'), 0)
+	Traceback (most recent call last):
+		...
+	OverflowError: cannot convert float infinity to integer
+
+case of float overflow 2:
+
+	>>> add_integer(float('inf'), float('-inf'))
+	Traceback (most recent call last):
+		...
+	OverflowError: cannot convert float infinity to integer
+
+case of NaN:
+
+	>>> add_integer(0, float('nan'))
+	Traceback (most recent call last):
+		...
+	ValueError: cannot convert float NaN to integer
+
 When argument passed is not an integer or float
 -----------------------------------------------
 
