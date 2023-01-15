@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-""" Execution a class representing a list ``MyList`` that inherits
+"""
+Execution a class representing a list ``MyList`` that inherits
 from the built-in python list.
 """
 
