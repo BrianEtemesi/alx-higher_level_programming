@@ -3,6 +3,7 @@
 methods of an object
 """
 
+
 def lookup(obj):
     """returns a list of available attributes of a class"""
 
