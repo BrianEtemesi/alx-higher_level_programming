@@ -21,5 +21,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(self.r1.id, 1)
         self.assertEqual(self.r2.id, 4)
 
+
+
 if __name__ == '__main__':
     unittest.main()
