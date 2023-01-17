@@ -14,7 +14,7 @@ class Base:
     def __init__(self, id=None):
         """Initializes new instances with an id"""
 
-        if id == None:
+        if id is None:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
         else:
