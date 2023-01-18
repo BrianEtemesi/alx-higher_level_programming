@@ -102,4 +102,3 @@ class Rectangle(Base):
                 else:
                     print("#", end='')
                 k += 1
-
