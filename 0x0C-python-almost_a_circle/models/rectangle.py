@@ -102,3 +102,10 @@ class Rectangle(Base):
                 else:
                     print("#", end='')
                 k += 1
+
+    def __str__(self):
+        """returns specified details of a rectangle instance"""
+
+        return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__, self.id,
+                                                self.__x, self.__y,
+                                                self.__width, self.__height)
