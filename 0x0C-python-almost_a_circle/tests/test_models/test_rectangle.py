@@ -64,5 +64,46 @@ class TestRectangle(unittest.TestCase):
         self.assertRaises(ValueError, Rectangle, 2, 0)
         self.assertRaises(ValueError, Rectangle, 2, -5)
 
+    def test_x(self):
+
+        self.assertEqual(self.r1.x, 0)
+        self.assertEqual(self.r2.x, 3)
+        self.assertEqual(self.r3.x, 0)
+
+        self.r1.x = 1
+        self.r2.x = 2
+
+        self.assertEqual(self.r1.x, 1)
+        self.assertEqual(self.r2.x, 2)
+
+        self.assertRaises(TypeError, Rectangle, 2, 4, "3")
+        self.assertRaises(TypeError, Rectangle, 2, 4, 3.55)
+        self.assertRaises(TypeError, Rectangle, 2, 4, True)
+        self.assertRaises(TypeError, Rectangle, 2, 4, [3])
+        self.assertRaises(TypeError, Rectangle, 2, 4, (3,))
+        self.assertRaises(TypeError, Rectangle, 2, 4, None)
+
+        self.assertRaises(ValueError, Rectangle, 2, 4, -1)
+
+    def test_y(self):
+
+        self.assertEqual(self.r1.y, 0)
+        self.assertEqual(self.r2.y, 5)
+        self.assertEqual(self.r3.x, 0)
+
+        self.r1.y = 10
+        self.r2.y = 9
+
+        self.assertEqual(self.r1.y, 10)
+        self.assertEqual(self.r2.y, 9)
+
+        self.assertRaises(TypeError, Rectangle, 2, 4, 0, "3")
+        self.assertRaises(TypeError, Rectangle, 2, 4, 0, 3.55)
+        self.assertRaises(TypeError, Rectangle, 2, 4, 0, True)
+        self.assertRaises(TypeError, Rectangle, 2, 4, 0, [3])
+        self.assertRaises(TypeError, Rectangle, 2, 4, 0, (3,))
+
+        self.assertRaises(ValueError, Rectangle, 2, 4, 0, -4)
+
 if __name__ == '__main__':
     unittest.main()
