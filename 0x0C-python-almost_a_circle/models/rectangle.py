@@ -94,8 +94,13 @@ class Rectangle(Base):
     def display(self):
         """prints rectangle to stdout using '#' """
 
+        for i in range(self.__y):
+            print()
+
         for i in range(self.__height):
             k = 1
+            for x in range(self.__x):
+                print(' ', end="")
             for j in range(self.__width):
                 if k == self.__width:
                     print("#")
