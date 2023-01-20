@@ -111,5 +111,15 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(self.r2.area(), 75)
         self.assertEqual(self.r3.area(), 168)
 
+    def update(self):
+
+        self.r1.update(44)
+        self.r1.update(44, 22)
+        self.r2.update(10, 11, 33)
+        self.r2.update(10, 11, 33, 7)
+        self.r3.update(66, 20, 30, 22, 33)
+
+        self.assertEqual
+
 if __name__ == '__main__':
     unittest.main()
