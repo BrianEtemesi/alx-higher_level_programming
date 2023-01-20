@@ -125,5 +125,14 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(self.r3.x, 22)
         self.assertEqual(self.r3.y, 33)
 
+        r5 = Rectangle(10, 10, 10, 10, 44)
+        r5.update(id=22, width=11, x=5, height=44,)
+
+        self.assertEqual(r5.height, 44)
+        self.assertEqual(r5.width, 11)
+        self.assertEqual(r5.id, 22)
+        self.assertEqual(r5.x, 5)
+        self.assertEqual(r5.y, 10)
+
 if __name__ == '__main__':
     unittest.main()
