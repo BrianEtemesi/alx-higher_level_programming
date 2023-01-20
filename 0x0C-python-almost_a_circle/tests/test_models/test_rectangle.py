@@ -111,7 +111,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(self.r2.area(), 75)
         self.assertEqual(self.r3.area(), 168)
 
-    def update(self):
+    def test_update(self):
 
         self.r1.update(44)
         self.r1.update(44, 22)
@@ -119,7 +119,11 @@ class TestRectangle(unittest.TestCase):
         self.r2.update(10, 11, 33, 7)
         self.r3.update(66, 20, 30, 22, 33)
 
-        self.assertEqual
+        self.assertEqual(self.r1.id, 44)
+        self.assertEqual(self.r1.width, 22)
+        self.assertEqual(self.r2.height, 33)
+        self.assertEqual(self.r3.x, 22)
+        self.assertEqual(self.r3.y, 33)
 
 if __name__ == '__main__':
     unittest.main()
