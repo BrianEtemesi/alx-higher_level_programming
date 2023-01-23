@@ -31,4 +31,13 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(self.s1.width, 5)
         self.assertEqual(self.s2.width, 10)
 
-        self.s2.width
+        self.s2.width = 11
+
+        self.assertEqual(self.s2.width, 11)
+
+        self.assertRaises(TypeError, Square, 5.4)
+        self.assertRaises(TypeError, Square, True)
+        self.assertRaises(TypeError, Square, [2])
+        self.assertRaises(TypeError, Square, (2,))
+        self.assertRaises(TypeError, Square, None)
+        self.assertRaises(TypeError, Square, "2")
