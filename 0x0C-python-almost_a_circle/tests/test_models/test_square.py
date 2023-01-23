@@ -44,3 +44,35 @@ class TestSquare(unittest.TestCase):
 
         self.assertRaises(ValueError, Square, 0)
         self.assertRaises(ValueError, Square, -1)
+
+    def test_y(self):
+        """test y attribute of a square instance"""
+
+        self.assertEqual(self.s1.y, 0)
+        self.assertEqual(self.s3.y, 6)
+        self.assertEqual(self.s4.x, 4)
+
+        self.assertRaises(TypeError, Square, 2, 2, 3.2)
+        self.assertRaises(TypeError, Square, 2, 2, True)
+        self.assertRaises(TypeError, Square, 2, 2, [3])
+        self.assertRaises(TypeError, Square, 2, 2, (3,))
+        self.assertRaises(TypeError, Square, 2, 2, None)
+        self.assertRaises(TypeError, Square, 2, 2, "3")
+
+        self.assertRaises(ValueError, Square, 2, 2, -1)
+
+    def test_x(self):
+        """test x attribute of a square instance"""
+
+        self.assertEqual(self.s1.x, 0)
+        self.assertEqual(self.s3.x, 2)
+        self.assertEqual(self.s4.x, 4)
+
+        self.assertRaises(TypeError, Square, 2, 3.2)
+        self.assertRaises(TypeError, Square, 2, True)
+        self.assertRaises(TypeError, Square, 2, [3])
+        self.assertRaises(TypeError, Square, 2, (3,))
+        self.assertRaises(TypeError, Square, 2, None)
+        self.assertRaises(TypeError, Square, 2, "3")
+
+        self.assertRaises(ValueError, Square, 2, -1)
