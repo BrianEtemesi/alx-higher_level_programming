@@ -21,3 +21,16 @@ class Square(Rectangle):
         s_size = "- {}".format(self.width)
 
         return s_square + s_id + s_x_y + s_size
+
+    @property
+    def size(self):
+        """returns/retrieves the size of a square instance"""
+
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        """updates the value of size"""
+
+        self.width = value
+        self.height = value
