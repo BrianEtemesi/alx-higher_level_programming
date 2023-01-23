@@ -46,6 +46,27 @@ class TestSquare(unittest.TestCase):
         self.assertRaises(ValueError, Square, 0)
         self.assertRaises(ValueError, Square, -1)
 
+    def test_size(self):
+        """test size attribute of a square instance"""
+
+        self.assertEqual(self.s1.size, 5)
+
+        self.s1.size = 10
+
+        self.assertEqual(self.s1.size, 10)
+        with self.assertRaises(TypeError):
+            self.s1.size = True
+
+        with self.assertRaises(TypeError):
+            self.s1.size = "10"
+
+        with self.assertRaises(ValueError):
+            self.s1.size = -1
+
+        with self.assertRaises(ValueError):
+            self.s1.size = 0
+
+    
     def test_area(self):
         """test area method of a square instance"""
 
