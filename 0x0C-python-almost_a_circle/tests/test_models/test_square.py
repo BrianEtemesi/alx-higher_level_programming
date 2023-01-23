@@ -4,7 +4,7 @@ that inherits from the Rectangle class"""
 
 import unittest
 from models.square import Square
-
+from models.base import Base
 
 class TestSquare(unittest.TestCase):
     """Test class for the Square class"""
@@ -12,6 +12,7 @@ class TestSquare(unittest.TestCase):
     def setUp(self):
         """set up sample square objects"""
 
+        Base._Base__nb_objects = 0
         self.s1 = Square(5)
         self.s2 = Square(10, id=100)
         self.s3 = Square(4, 2, 6, 200)
@@ -44,6 +45,12 @@ class TestSquare(unittest.TestCase):
 
         self.assertRaises(ValueError, Square, 0)
         self.assertRaises(ValueError, Square, -1)
+
+    def test_area(self):
+        """test area method of a square instance"""
+
+        self.assertEqual(self.s1.area(), 25)
+        self.assertEqual(self.s3.area(), 16)
 
     def test_y(self):
         """test y attribute of a square instance"""
