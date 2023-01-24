@@ -4,7 +4,7 @@ This class will be the “base” of all other classes in this project.
 The goal of it is to manage id attribute in all your future classes
 and to avoid duplicating the same code (by extension, same bugs)
 """
-
+import json
 
 class Base:
     """Base class of other classes in this project"""
@@ -19,3 +19,13 @@ class Base:
             self.id = Base.__nb_objects
         else:
             self.id = id
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """returns a JSON string representation of list dictionaries"""
+
+        if list_dictionaries == None or len(list_dictionaries) == 0:
+            return "[]"
+        else:
+            jstr = json.dumps(list_dictionaries)
+            return jstr

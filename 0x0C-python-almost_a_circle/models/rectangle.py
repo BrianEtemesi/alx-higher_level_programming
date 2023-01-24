@@ -132,9 +132,8 @@ class Rectangle(Base):
     def to_dictionary(self):
         """returns a dictionary representation of rectangle instance"""
 
+        list_attr = ["id", "width", "height", "x", "y"]
         dr = {}
-        for name in dir(self):
-            value = getattr(self, name)
-            if not name.startswith('_') and not inspect.ismethod(value):
-                dr[name] = value
+        for key in list_attr:
+            dr[key] = getattr(self, key)
         return dr
