@@ -52,10 +52,8 @@ class Square(Rectangle):
     def to_dictionary(self):
         """returns a dictionary representation of a square object"""
 
+        list_attr = ['id', 'size', 'x', 'y']
         sq = {}
-        for name in dir(self):
-            value = getattr(self, name)
-            if not name.startswith('_') and not inspect.ismethod(value):
-                if name != 'height' and name != 'width':
-                    sq[name] = value
+        for key in list_attr:
+            sq[key] = getattr(self, key)
         return sq
