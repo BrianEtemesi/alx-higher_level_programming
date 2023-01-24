@@ -2,6 +2,7 @@
 """Implementation of a 'Square' class that inherits
 from a superclass 'Rectangle' """
 from models.rectangle import Rectangle
+import inspect
 
 
 class Square(Rectangle):
@@ -47,3 +48,14 @@ class Square(Rectangle):
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        """returns a dictionary representation of a square object"""
+
+        sq = {}
+        for name in dir(self):
+            value = getattr(self, name)
+            if not name.startswith('_') and not inspect.ismethod(value):
+                if name != 'height' and name != 'width':
+                    sq[name] = value
+        return sq
