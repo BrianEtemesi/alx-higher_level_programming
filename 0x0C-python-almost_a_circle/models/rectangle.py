@@ -3,6 +3,7 @@
 from Base
 """
 from models.base import Base
+import inspect
 
 
 class Rectangle(Base):
@@ -127,3 +128,13 @@ class Rectangle(Base):
         return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__, self.id,
                                                 self.__x, self.__y,
                                                 self.__width, self.__height)
+
+    def to_dictionary(self):
+        """returns a dictionary representation of rectangle instance"""
+
+        dr = {}
+        for name in dir(self):
+            value = getattr(self, name)
+            if not name.startswith('_') and not inspect.ismethod(value):
+                dr[name] = value
+        return dr
