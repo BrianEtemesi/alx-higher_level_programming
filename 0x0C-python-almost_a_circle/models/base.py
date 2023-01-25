@@ -48,4 +48,4 @@ class Base:
         jstr = Base.to_json_string(newlist)
 
         with open(filename, mode='w', encoding='utf=8') as a_file:
-                return a_file.write(jstr)
+            return a_file.write(jstr)
