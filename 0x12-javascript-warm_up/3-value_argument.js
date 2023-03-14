@@ -1,3 +1,8 @@
 #!/usr/bin/node
 // prints first argument passed
-console.log(process.argv[2]);
+const arg = process.argv[2];
+if (arg == null) {
+  console.log('No argument');
+} else {
+  console.log(arg);
+}
