@@ -8,7 +8,7 @@ if (len < 4) {
   for (let i = 2; i < len; i++) {
     numList.push(parseInt(process.argv[i]));
   }
-  numList.sort();
+  numList.sort(function (a, b) { return a - b; });
   numList.reverse();
   console.log(numList[1]);
 }
