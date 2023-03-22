@@ -15,5 +15,5 @@ if __name__ == '__main__':
     cur.execute(query)
     n_states = cur.fetchall()
     for state in n_states:
-        print (state)
+        print(state)
     db.close()
