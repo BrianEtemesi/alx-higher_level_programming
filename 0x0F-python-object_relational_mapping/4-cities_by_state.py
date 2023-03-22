@@ -15,7 +15,11 @@ if __name__ == '__main__':
     # create a cursor object to execute SQL queries
     cur = db.cursor()
 
-    query = "SELECT * FROM cities"
+    query = "
+    SELECT cities.id, cities.name, states.name
+    FROM cities
+    JOIN states ON cities.states.id = states.id
+    "
     cur.execute(query)
     cities = cur.fetchall()
     for city in cities:
