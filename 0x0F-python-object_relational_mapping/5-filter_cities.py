@@ -25,7 +25,7 @@ if __name__ == '__main__':
     cur.execute(query, (argv[4]))
     cities = cur.fetchall()
     length = len(cities)
-    for i in range length:
+    for i in range(length):
         if (i == length - 1):
             print(cities[i])
         else:
