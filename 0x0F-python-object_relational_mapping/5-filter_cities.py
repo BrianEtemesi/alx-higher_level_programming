@@ -19,8 +19,8 @@ if __name__ == '__main__':
     query = """
     SELECT cities.name
     FROM cities
-    WHERE states.name = %s
     JOIN states ON cities.state_id = states.id
+    WHERE states.name = %s
     """
     cur.execute(query, (argv[4],))
     cities = cur.fetchall()
