@@ -24,4 +24,4 @@ if __name__ == '__main__':
     """
     cur.execute(query, (argv[4],))
     cities = cur.fetchall()
-    print(",".join([city[0] for city in cities]))
+    print(", ".join([city[0] for city in cities]))
