@@ -15,7 +15,7 @@ if __name__ == '__main__':
     # create cursor object execute SQL queries
     cur = db.cursor()
     query = "SELECT * FROM states WHERE name = %s"
-    cur.execute(query, argv[4])
+    cur.execute(query, (argv[4],))
     matched_states = cur.fetchall()
     for state in matched_states:
         print(state)
