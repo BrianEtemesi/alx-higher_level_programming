@@ -22,7 +22,7 @@ if __name__ == '__main__':
     WHERE states.name = %s
     JOIN states ON cities.state_id = states.id
     """
-    cur.execute(query, (argv[4]))
+    cur.execute(query, (argv[4],))
     cities = cur.fetchall()
     length = len(cities)
     for i in range(length):
