@@ -5,7 +5,7 @@ Connects to a MySQL server running on `localhost`
 """
 
 from sqlalchemy import Column, Integer, String, create_engine
-from sqlalchemy.ext.declarative import declative_base
+from sqlalchemy.ext.declarative import declarative_base
 
 # create engine to connect to MySQL server
 engine = create_engine('mysql://localhost:3306')
