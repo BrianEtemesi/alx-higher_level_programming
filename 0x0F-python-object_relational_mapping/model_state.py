@@ -16,7 +16,7 @@ Base = declarative_base()
 
 class State(Base):
     """
-    Definition of a class represantation of a state
+    class represantation of a state
     """
 
     __tablename__ = 'states'
@@ -25,7 +25,7 @@ class State(Base):
 
 
 # add the state class to the registry 'importing'
-Base.registry.register(State)
+# Base.registry.register(State)
 
 # create all tables in the MySQL database
 # since we only have `State`, it is the only one created in the mysql db
