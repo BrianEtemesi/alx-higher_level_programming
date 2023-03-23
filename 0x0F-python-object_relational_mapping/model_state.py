@@ -8,7 +8,7 @@ from sqlalchemy import Column, Integer, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 
 # create engine to connect to MySQL server
-engine = create_engine('mysql://localhost:3306')
+# engine = create_engine('mysql://localhost:3306')
 
 # create a declarative base instance
 Base = declarative_base()
@@ -29,4 +29,4 @@ class State(Base):
 
 # create all tables in the MySQL database
 # since we only have `State`, it is the only one created in the mysql db
-Base.metadata.create_all(bind=engine)
+# Base.metadata.create_all(bind=engine)
