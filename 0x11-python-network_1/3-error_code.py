@@ -3,7 +3,7 @@
 This script sends a request to the url passed and displays
 body of the response, manages HTTP error exceptions
 """
-
+import urllib
 from urllib import request
 from sys import argv
 
