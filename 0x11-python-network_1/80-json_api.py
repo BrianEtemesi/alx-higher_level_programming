@@ -15,16 +15,15 @@ if __name__ == "__main__":
     except IndexError:
         values = {'q': ""}
     res = requests.post(url, data=values)
-    to_json = res.json()
-
-
     try:
-        name = to_json.get('name')
-        user_id = to_json.get('id')
-    except ValueError:
+        to_json = res.json()
+    except TypeError:
         print("Not a valid JSON")
 
-    if (name == None or user_id == None):
+    name = to_json.get('name')
+    user_id = to_json.get('id')
+
+    if (name is None or user_id is None):
         print("No result")
     else:
         print("[{}] {}".format(user_id, name))
