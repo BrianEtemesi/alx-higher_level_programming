@@ -11,5 +11,5 @@ if __name__ == "__main__":
 
     url = argv[1]
     res = requests.get(url)
-    h_value = res.headers['X-Request-Id']
+    h_value = res.headers.get('X-Request-Id')
     print(h_value)
