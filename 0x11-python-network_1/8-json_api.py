@@ -17,14 +17,14 @@ if __name__ == "__main__":
     res = requests.post(url, data=values)
     to_json = res.json()
 
-
     try:
         name = to_json.get('name')
         user_id = to_json.get('id')
     except ValueError:
         print("Not a valid JSON")
+        exit
 
-    if (name == None or user_id == None):
+    if (name is None or user_id is None):
         print("No result")
     else:
         print("[{}] {}".format(user_id, name))
