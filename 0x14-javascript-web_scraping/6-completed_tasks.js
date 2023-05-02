@@ -22,9 +22,9 @@ request(url, (error, response, body) => {
             nCompleted++;
           }
         }
-		if (nCompleted) {
+        if (nCompleted) {
           dict[i.toString()] = nCompleted;
-		}
+        }
       }
     }
     console.log(dict);
