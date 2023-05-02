@@ -7,15 +7,15 @@ const request = require('request');
 const url = 'https://swapi-api.alx-tools.com/api/films/' + movieId;
 request(url, (error, response, body) => {
   if (!error) {
-    film = JSON.parse(body);
-    actors = film.characters;
-	for (let i = 0; i < actors.length; i++) {
+    const film = JSON.parse(body);
+    const actors = film.characters;
+    for (let i = 0; i < actors.length; i++) {
       request(actors[i], (error, response, body) => {
         if (!error) {
-          actor = JSON.parse(body);
+          const actor = JSON.parse(body);
           console.log(actor.name);
-		}
-	  });
-	}
+        }
+      });
+    }
   }
 });
