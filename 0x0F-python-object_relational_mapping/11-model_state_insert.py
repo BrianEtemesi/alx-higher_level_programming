@@ -22,7 +22,8 @@ if __name__ == '__main__':
 
     # add new State object to our database
     session.add(new_state)
+    session.commit()  # flush the changes to the database
 
     # print id of new State object
-    state = session.query(State).filter_by(name='Louisiana')
+    state = session.query(State).filter_by(name='Louisiana').first()
     print(state.id)
