@@ -12,7 +12,7 @@ def inherits_from(obj, a_class):
         obj: object
         a_class: class type
     """
-    
+
     if type(obj) is a_class:
         return False
     return isinstance(obj, a_class)
