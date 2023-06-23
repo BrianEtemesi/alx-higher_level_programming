@@ -1,14 +1,13 @@
 #!/usr/bin/python3
 """
-Defines a function that returns an object by
-a JSON representation
+function that create object from json file
 """
 import json
 
 
-def from_json_string(my_str):
+def load_from_json_file(filename):
     """
     returns an object by a JSON representation
     """
-    with open(my_str, 'r') as file:
+    with open(filename, 'r') as file:
         return json.load(file)
